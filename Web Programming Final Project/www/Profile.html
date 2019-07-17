@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>StudyBuddy</title>
+       <link rel="stylesheet" type="text/css" href="stylesHome.css" />
+<style>
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<ul>
+  <li><a onclick="location.href=' Groups.html '" href="#Groups">Home</a></li>
+  <li><a onclick="location.href = 'CreateGroup.html ' " href="#home">Create Group</a></li>
+  <li><a onclick="location.href=' About.html'" href="#Aboutus">About Us</a></li>
+  <li class="dropdown" style="float:right" >
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Menu</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a onclick="location.href=' Profile.html'" href="#Profile">My Profile</a>
+      <a href="#">Logout</a>
+    </div>
+  </li>
+
+
+</ul>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+   <script>
+
+function myLookup() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1]; // change the 1 to a 0 to search group names 
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+
+<img class="img" src="img/profile.png" alt="Mountain View" style="width:200px;height:200px;"  >
+
+
+<form id="myForm" method="POST">
+      <input type="text" name="firstName" placeholder="First name"style=""><br>
+      <input type="text" name="lastName" placeholder="Last name"><br>
+      <input type="email" name="email" placeholder="Email"><br>
+      <input type="text" id="field_username" name="username" placeholder="Username"><br>
+      <input type="text" id="field_pwd1" name="password" placeholder="Password"><br>
+      <input type="text" id="field_pwd2" name="pwd2" placeholder="Confirm Password"><br>
+      <button <button type="submit" class="pure-button pure-button-primary" id="save" formaction= "/cgi-bin/edit_profile.py">Save Changes</button>
+    </br>
+    <button <button type="submit" class="pure-button pure-button-primary button1" id="Delete" formaction="/cgi-bin/delete_profile.py" onlclick= " logout()">Delete Account</button>
+    </form>
+
+
+
+<footer> Created by CSC 210 Group 21 
+<h3>
+Ahluwalia | Irankunda | Rossney | Williams
+</h3>
+</footer>
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+  
+<head>
+       <link rel="stylesheet" type="text/css" href="stylesHome.css" />
+<style>
+</style>
+
+<script>
+function showGroups(str) {
+  if (str=="") {
+    document.getElementById("txtHint").innerHTML="";
+    return;
+  } 
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else { // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("txtHint").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","getgroups.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
+</head>
+
+
+
+<body onload="showGroups()">
+
+<div class="container">
+
+<ul>
+	<div id="mydiv"></div>
+  <li><a onclick="location.href=' Groups.html '" href="#Groups">Home</a></li>
+  <li><a onclick="location.href = 'CreateGroup.html ' " href="#home">Create Group</a></li>
+  <li><a onclick="location.href=' About.html'" href="#Aboutus">About Us</a></li>
+  <li class="dropdown" style="float:right" >
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Menu</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a onclick="location.href=' Profile.html'" href="#Profile">My Profile</a>
+      <a onclick = "logout()" href="index.html">Logout</a>
+
+       
+    </div>
+  </li>
+
+
+</ul>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function myLookup() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1]; // change the 1 to a 0 to search group names 
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+function logout(){
+    window.location.href = "Index.html";
+    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    }
+</script>
+
+<div class="container-4">
+    <input type="text" id="search" onkeyup="myLookup()" placeholder="Search..." />
+</div>
+<br>
+<table id= "table">
+  <tr>    
+  <div id="txtHint"> </div>
+<h1>Use the table below to join existing StudyBuddy groups <br>
+   for large courses in the College of Arts and Sciences.</h1> 
+  <table id="myTable" align="center">
+  <tr class="header">
+    <th style="width:50%;">Group Name</th>
+     <th style="width:30%;">Course Name</th>
+    <th style="width:20%;">Course Code</th>
+    <th style="width:20%;">Join Group(s)</th>
+  </tr>
+  <br>
+
+  <tr>
+    <td>Brain and Cognitive Science Group</td>
+    <td>BCS</td>
+    <td>110</td>
+    <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+  <tr>
+    <td>Hard Bio Class Group</td>
+    <td>BIO</td>
+    <td>110</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+  <tr>
+    <td>Harder Bio Class Group</td>
+    <td>BIO</td>
+    <td>112</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+  <tr>
+    <td>Chem Club</td>
+    <td>CHM</td>
+    <td>131</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+   <tr>
+    <td>Python People</td>
+    <td>CSC</td>
+    <td>161</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+   <tr>
+    <td>Java Jocks</td>
+    <td>CSC</td>
+    <td>171</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+   <tr>
+    <td>Principles of Econ Group</td>
+    <td>ECO</td>
+    <td>108</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+   <tr>
+    <td>Calculus I</td>
+    <td>MTH</td>
+    <td>141</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+   <tr>
+    <td>Calculuus II</td>
+    <td>MTH</td>
+    <td>142</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+   <tr>
+    <td>Harder Calculus I</td>
+    <td>MTH</td>
+    <td>161</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+   <tr>
+    <td>Harder Calculus II</td>
+    <td>MTH</td>
+    <td>162</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+   <tr>
+    <td>Earth Study Group</td>
+    <td>EES</td>
+    <td>101</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+   <tr>
+    <td>Physics Fun</td>
+    <td>PHY</td>
+    <td>111</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+     <tr>
+    <td>Political People</td>
+    <td>PSC</td>
+    <td>101</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+     <tr>
+    <td>Stats Group</td>
+    <td>STT</td>
+    <td>212</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+     <tr>
+    <td>Writers</td>
+    <td>WRT</td>
+    <td>105</td>
+        <td> <input type="checkbox" name="query_myTextEditBox" style="text-align:center; vertical-align: middle;"></td>
+  </tr>
+</table>
+
+<button formaction="/cgi-bin/joinGroup.py">Save Changes</button>
+ 
+
+<script>
+function myLookup() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1]; // change the 1 to a 0 to search group names 
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+
+<footer> Created by CSC 210 Group 21 
+<h3>
+Ahluwalia | Irankunda | Rossney | Williams
+</h3>
+</footer>
+
+</div>
+
+</body>
+</html>
+

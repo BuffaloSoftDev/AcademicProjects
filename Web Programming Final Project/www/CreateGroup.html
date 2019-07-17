@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>StudyBuddy</title>
+       <link rel="stylesheet" type="text/css" href="stylesHome.css" />
+<style>
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<ul>
+  <li><a onclick="location.href=' Groups.html '" href="#Groups">Home</a></li>
+  <li><a onclick="location.href = 'CreateGroup.html ' " href="#home">Create Group</a></li>
+  <li><a onclick="location.href=' About.html'" href="#Aboutus">About Us</a></li>
+  <li class="dropdown" style="float:right" >
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Menu</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a onclick="location.href=' Profile.html'" href="#Profile">My Profile</a>
+      <a href="#">Logout</a>
+    </div>
+  </li>
+
+
+</ul>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+<header>
+   StudyBuddy
+</header>
+
+  <form method="get">
+
+    <br>
+    School:
+    <select name="school"<style > </style>>
+      <option value="School of Arts and Sciences">Arts and Sciences</option>
+      <option value="Hajim School of Engineering and Applied Sciences">Hajim</option>
+       <option value="Nursing">Nursing</option>
+       <option value="Medicine and Dentistry">Medicine and Denistry</option>
+       <option value="Simon School of Business">Business</option>
+       <option value="Warner Graduate School of Education">Warner</option>
+       <option value="Eastman Institute for Oral Health">Oral</option>
+       <option value="Eastman School of Music">Music</option>
+       
+      </select>
+      <BR>
+      <BR/>
+       Study Group Name: <input type="text" placeholder="Name for your group" name="GroupName" maxlength="20">
+      <BR>
+      <BR/>
+       Course Name: <input type="text" placeholder="Ex.- Calculus I" name="CourseName" maxlength="20"><BR>
+      <BR/>
+       3-Digit Course Code: <input type="text" placeholder="Ex.-123" name="CourseID" maxlength="3"><BR>
+      <BR/>
+
+      <button formaction = "/cgi-bin/GroupCreator.py" onclick="location.href='Courses.html'"> Create Study Group </button>
+    </form>
+
+<BR>
+
+
+
+
+</BR>
+
+<footer> Created by CSC 210 Group 21 
+<h3>
+Ahluwalia | Irankunda | Rossney | Williams
+</h3>
+</footer>
+
+</div>
+
+</body>
+</html>
+

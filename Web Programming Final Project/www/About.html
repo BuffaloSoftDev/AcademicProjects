@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>StudyBuddy</title>
+       <link rel="stylesheet" type="text/css" href="stylesHome.css" />
+<style>
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  
+<ul>
+  <li><a onclick="location.href=' Groups.html '" href="#Groups">Home</a></li>
+  <li><a onclick="location.href = 'CreateGroup.html ' " href="#home">Create Group</a></li>
+  <li><a onclick="location.href=' About.html'" href="#Aboutus">About Us</a></li>
+  <li class="dropdown" style="float:right" >
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Menu</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a onclick="location.href=' Profile.html'" href="#Profile">My Profile</a>
+      <a href="#">Logout</a>
+    </div>
+  </li>
+
+
+</ul>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+<header>
+ StudyBuddy
+</header>
+
+<article>
+  <h1>Description of the Awesome people in our Group!</h1>
+  <p>Cookie Monster</p>
+  <p>George wannabe Clooney</p>
+  <p>Mr Pancakes</p>
+  <p>Christan With the Guns</p>
+
+</article>
+
+<footer> Created by CSC 210 Group 21 
+<h3>
+Ahluwalia | Irankunda | Rossney | Williams
+</h3>
+</footer>
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+<script type="text/javascript">
+
+		function setCookie(cname,cvalue,exdays) {
+		    var d = new Date();
+		    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		    var expires = "expires=" + d.toGMTString();
+		    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+
+		function getCookie(cname) {
+		    var name = cname + "=";
+		    var ca = document.cookie.split(';');
+		    for(var i = 0; i < ca.length; i++) {
+		        var c = ca[i];
+		        while (c.charAt(0) == ' ') {
+		            c = c.substring(1);
+		        }
+		        if (c.indexOf(name) == 0) {
+		            return c.substring(name.length, c.length);
+		        }
+		    }
+		    return "";
+		}
+
+		function checkCookie() {
+   			var username=getCookie("username");
+    		if (username!="") {
+       			window.location.href = "Groups.html";
+        		document.getElementById("mydiv").innerHTML = "Welcome again";
+    		} else {
+    			username = document.getElementById("LoginForm").elements[0].value;
+        		if (username != "" && username != null) {
+            		setCookie("username", username, 365);
+        		}
+    		}
+}
+        
+</script>
+</head>
+<body onload="checkCookie()">
+
+
+<h1>Login into StuddyBuddy</h1>
+
+ 
+
+<form id="LoginForm" method="GET" action ="/cgi-bin/login.py">
+	
+<p>
+<input type="text" id="keyInput" name="username" placeholder="User ID"/>
+<br>
+<input type="password" id="valueInput" name="password" placeholder="Password"/>
+<br>
+
+</p>
+
+	<h2>
+	<button id="login_submit" onclick= "checkCookie()" >Sign-in </button>
+	<button id="create_account">Create Account</button>
+	</h2>
+</form>
+
+<script type="text/javascript">
+    document.getElementById("create_account").onclick = function () {
+        location.href = "CreateAccount.html";
+    };
+	</script>
+
+
+</body>
+</html>

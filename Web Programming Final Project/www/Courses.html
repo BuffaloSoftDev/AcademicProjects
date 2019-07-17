@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>StudyBuddy</title>
+       <link rel="stylesheet" type="text/css" href="stylesHome.css" />
+<style>
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<ul>
+  <li><a onclick="location.href = 'Home.html ' " href="#home">Home</a></li>
+  <li><a onclick="location.href = 'Courses.html ' " href="#courses">Courses</a></li>
+  <li><a onclick="location.href=' Reminders.html '" href="#reminders">Reminders</a></li>
+  <li><a onclick="location.href=' About.html'" href="#Aboutus">About Us</a></li>
+  <li style="float:right"><a class="active" onclick="location.href=' Profile.html'" href="#about">My Profile</a></li>
+</ul>
+
+<header>
+   <h1>StudyBuddy</h1>
+</header>
+
+ <button <button type="submit" class="pure-button pure-button-primary" id="current_groups">Current Groups</button>
+
+  <button <button type="submit" class="pure-button pure-button-primary" id="current_courses">Current Courses</button>
+
+  <script type="text/javascript">
+    document.getElementById("current_courses").onclick = function () {
+     document.getElementById('dataTable').style.display="none";
+    };
+    return ok;
+  }
+   </script>
+
+<script type="text/javascript">
+    document.getElementById("current_groups").onclick = function () {
+     document.getElementById('dataTable').style.display="block";
+    };
+    return ok;
+  }
+   </script>
+
+Study Groups: 
+	
+<?php 
+  $groupID = "database-groupID";
+  $groupName = "database-groupName";
+  $host = "localhost";
+
+  $connector = mysql_connect($host,$username,$password)
+      or die("Unable to connect");
+    echo "Connection made";
+    $selected = mysql_select_db("groups", $connector)
+      or die("Can't connect");
+
+
+      //execute the SQL query and return records
+      $result = mysql_query("SELECT * FROM table_one ");
+      ?>
+      <table border="2" style= "background-color: #ffffff; color: #761a9b; margin: 0 auto;" >
+      <thead>
+        <tr>
+          <th>GroupName</th>
+          <th>CourseID</th>
+          <th>CourseName</th>
+          <td>GroupID</td> 
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+          while( $row = mysql_fetch_assoc( $result ) ){
+            echo
+            "<tr>
+              <td>{$row\['GroupName'\]}</td>
+              <td>{$row\['CourseID'\]}</td>
+              <td>{$row\['CourseName'\]}</td>
+              <td>{$row\['GroupID'\]}</td>
+            </tr>\
+          }
+        ?>
+      </tbody>
+    </table>
+     <?php mysql_close($connector); 
+     ?>
+
+<footer>StudyBuddy</footer>
+
+</div>
+
+</body>
+</html>
