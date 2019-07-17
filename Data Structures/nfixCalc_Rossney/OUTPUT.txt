@@ -1,0 +1,61 @@
+ George Rossney 
+ Project 2: Infix Calculator  
+ CSC 172
+ Lab TA: Pauline Chen 
+ Session: T/Th 4:50-6:05pm 
+
+The following is the output I got from the Eclipse console when running the 25-line sample file provided in the course materials. 
+
+
+OUTPUT: 
+
+line 1 answer is: 
+2.0
+line 2 answer is: 
+6.2
+line 3 answer is: 
+6.2
+line 4 answer is: 
+0.0
+line 5 answer is: 
+4.2
+line 6 answer is: 
+-4.2
+line 7 answer is: 
+12.0
+line 8 answer is: 
+16.0
+line 9 answer is: 
+-8.0
+line 10 answer is: 
+9.0
+line 11 answer is: 
+1.0
+line 12 answer is: 
+0.0
+line 13 answer is: 
+0.0
+line 14 answer is: 
+1.0
+line 15 answer is: 
+1.0
+line 16 answer is: 
+1.0
+line 17 answer is: 
+0.0
+line 18 answer is: 
+1.0
+line 19 answer is: 
+0.0
+line 20 answer is: 
+1.0
+line 21 answer is: 
+0.0
+line 22 answer is: 
+1.0
+line 23 answer is: 
+0.0
+line 24 answer is: 
+0.0
+line 25 answer is: 
+1.0

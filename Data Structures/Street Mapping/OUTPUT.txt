@@ -1,0 +1,31 @@
+George Rossney 
+Project 4: Street Mapping 
+Course: CSC 172
+Lab TA: Pauline Chen 
+Session: T/Th 4:50-6:05pm 
+
+OUTPUT
+
+The following is sample output from the console. I used the “ur.txt” input file as the map for the output below. The output should show the shortest directed path between the start and end points entered. 
+
+Let's find the shortest path.
+Enter a starting point (example: "i15"):  
+i17
+Enter a destination point: 
+i59
+Intersect: i17-->Intersect: i23-->Intersect: i24-->Intersect: i26-->Intersect: i27-->Intersect: i29-->Intersect: i54-->Intersect: i55-->Intersect: i60-->Intersect: ITS-->Intersect: i59
+ Road: r43 Road: r45 Road: r48 Road: r49 Road: r74 ,  Road: r81 Road: r82 Road: r117 Road: r118 Road: r119
+Number of intersections is: 124
+Number of roads is: 11
+
+
+
+Let's find the shortest path.
+Enter a starting point (example: "i15"):  
+i78
+Enter a destination point: 
+i16
+Intersect: i78-->Intersect: i79-->Intersect: GOERGEN-ATHLETIC-->Intersect: i54-->Intersect: i29-->Intersect: i27-->Intersect: i26-->Intersect: i24-->Intersect: i23-->Intersect: i17-->Intersect: i16
+ Road: r163 ,  Road: r181 ,  Road: r180 ,  Road: r81 ,  Road: r74 Road: r49 ,  Road: r48 ,  Road: r45 ,  Road: r43 ,  Road: r27
+Number of intersections is: 124
+Number of roads is: 11

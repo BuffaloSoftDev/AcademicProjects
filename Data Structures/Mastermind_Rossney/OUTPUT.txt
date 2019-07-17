@@ -1,0 +1,81 @@
+
+
+ George Rossney 
+ Project 1- Mastermind  
+ CSC 172
+ Lab TA: Pauline Chen 
+ Session: T/Th 4:50-6:05pm
+
+Sample Output:
+
+How many colors from R,O,Y,G,B,I,V,P,T,B? Input an amount of colors from 1 to 10 using capital letters : 
+3
+Color Code : ROY
+Enter a color combination with 3 color codes: ROY
+Your color combination is: ROY
+
+BRR
+White Pegs: 1
+Black Pegs: 0
+----------
+
+ROO
+White Pegs: 0
+Black Pegs: 2
+--------
+
+ROY
+White Pegs: 0
+Black Pegs: 3
+--------
+
+It took 3 guesses to find the solution.
+Would you like to play again? Enter "Y" for yes  or "N" for no :  N
+
+
+
+
+How many colors from R,O,Y,G,B,I,V,P,T,B? Input an amount of colors from 1 to 10 using capital letters : 
+6
+Color Code : ROYGBI
+Enter a color combination with 6 color codes: ROYIBG
+Your color combination is: ROYIBG
+
+BBBRRR
+White Pegs: 2
+Black Pegs: 0
+----------
+
+RROOOO
+White Pegs: 1
+Black Pegs: 1
+--------
+
+ROYYYB
+White Pegs: 1
+Black Pegs: 3
+--------
+
+ROYGBG
+White Pegs: 0
+Black Pegs: 5
+--------
+
+ROYGBI
+White Pegs: 2
+Black Pegs: 4
+--------
+
+ROYIBG
+White Pegs: 0
+Black Pegs: 6
+--------
+
+It took 6 guesses to find the solution.
+Would you like to play again? Enter "Y" for yes  or "N" for no :  N
+
+
+
+
+
+

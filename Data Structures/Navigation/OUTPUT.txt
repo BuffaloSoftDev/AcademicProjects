@@ -1,0 +1,26 @@
+ George Rossney 
+ Project 3: Point Location  
+ CSC 172
+ Lab TA: Pauline Chen 
+ Session: T/Th 4:50-6:05pm
+
+The output is very unique for this project, as it depends entirely on the number of lines, the points, and the length of the lines inserted into the binary tree from the user’s text file. 
+
+Test file contents:
+4
+0.25 0.75 0.50 1.00
+0.05 0.84 0.50 0.99
+0.25 0.88 0.99 0.20
+0.50 1.00 0.80 0.35
+0.25 0.80 0.60 0.50
+0.95 0.10 0.11 0.50
+
+OUTPUT from the console:
+Please enter a text file name, including path, without spaces: 
+src/PointText.txt
+Point Set(s) 1: 
+Insersection: (0.25, 0.75) (0.5, 1.0)
+Point Set(s) 2: 
+Insersection: (0.25, 0.75) (0.5, 1.0)
+
+
